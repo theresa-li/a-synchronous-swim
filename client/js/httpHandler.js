@@ -1,20 +1,12 @@
-import { setInterval } from "timers";
-
 setInterval(
-
   function () {
-
-    const serverUrl = 'http://127.0.0.1:3000';
-
     $.ajax({
-      url: serverUrl,
-      method: 'GET',
-      success: function (result) {
-        SwimTeam.move(result);
+      url: 'http://127.0.0.1:3000',
+      type: 'GET',
+      success: function (data) {
+        SwimTeam.move(data);
       }
     })
   }, 1000
-
 );
-
 

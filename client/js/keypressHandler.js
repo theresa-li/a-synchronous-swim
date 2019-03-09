@@ -1,16 +1,16 @@
 $('document').ready(function () {
 
-  setInterval(
-    function () {
-      $.ajax({
-        url: 'http://127.0.0.1:3000',
-        type: 'GET',
-        success: function (data) {
-          SwimTeam.move(data);
-        }
-      })
-    }, 1000
-  );
+  // setInterval(
+  //   function () {
+  //     $.ajax({
+  //       url: 'http://127.0.0.1:3000',
+  //       type: 'GET',
+  //       success: function (data) {
+  //         SwimTeam.move(data);
+  //       }
+  //     })
+  //   }, 1000
+  // );
 
 
   // $.get(
