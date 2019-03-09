@@ -1,12 +1,23 @@
 $('document').ready(function () {
+
+  setInterval(
+    function () {
+      $.ajax({
+        url: 'http://127.0.0.1:3000',
+        type: 'GET',
+        success: function (data) {
+          SwimTeam.move(data);
+        }
+      })
+    }, 1000
+  );
+
+
   // $.get(
   //   '127.0.0.1:3000', function () {
   //     console.log('we in here!')
   //   }
   // );
-
-  console.log('reaaaddy!!!!!!');
-
   // $.ajax({
   //   url: '127.0.0.1:3000',
   //   type: 'GET'
@@ -14,15 +25,6 @@ $('document').ready(function () {
   //   console.log('we in here!')
   //   SwimTeam.move(data);
   // });
-
-  $.ajax({
-    url: '127.0.0.1:3000',
-    type: 'GET',
-    success: function () {
-      console.log('we in here!')
-    }
-  });
-
 
 
 });
