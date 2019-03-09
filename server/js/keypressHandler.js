@@ -37,16 +37,16 @@ module.exports.initialize = () => {
 
     // check to see if the keypress itself is a valid message
     if (isValidMessage(key.name)) {
-      console.log(`Message received: ${key.name}`);
+      console.log(`Message received from DIRECTION PRESSED: ${key.name}`);
       return; // don't do any more processing on this key
     }
-    
+
     // otherwise build up a message from individual characters
     if (key && (key.name === 'return' || key.name === 'enter')) {
       // on enter, process the message
       logKeypress('\n');
       if (message.length > 0) {
-        console.log(`Message received: ${message}`);
+        console.log(`Message received from WORD TYPED: ${message}`);
       }
       // clear the buffer where we are collecting keystrokes
       message = '';

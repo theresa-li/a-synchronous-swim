@@ -21,12 +21,14 @@ describe('server responses', () => {
   });
 
   it('should respond to a GET request for a swim command', (done) => {
-    // let { req, res } = server.mock('/', 'GET');
+    let { req, res } = server.mock('/', 'GET');
 
-    // httpHandler.router(req, res);
-    // expect(res._responseCode).to.equal(200);
-    // expect(res._ended).to.equal(true);
-    // expect(res._data.toString()).to.be.empty;
+    var commands = ['left', 'right', 'up', 'down'];
+
+    httpHandler.router(req, res);
+    expect(res._responseCode).to.equal(200);
+    expect(res._ended).to.equal(true);
+    expect(commands).to.include(res._data.toString());
     done();
   });
 

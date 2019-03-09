@@ -33,6 +33,16 @@ $('body').on('keydown', (event) => {
   var arrowPress = event.key.match(/Arrow(Up|Down|Left|Right)/);
   if (arrowPress) {
     var direction = arrowPress[1];
+
+    // $.ajax({
+    //   url: 'http://127.0.0.1:3000',
+    //   type: 'POST',
+    //   data: { directionGoing: 'down' },
+    //   success: function (data) {
+    //     SwimTeam.move(data);
+    //   }
+    // })
+
     SwimTeam.move(direction.toLowerCase());
   }
 });
