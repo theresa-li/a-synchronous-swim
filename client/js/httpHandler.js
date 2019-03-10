@@ -7,7 +7,7 @@ setInterval(
         SwimTeam.move(data);
       }
     })
-  }, 1000
+  }, 200
 );
 
 
